@@ -1,168 +1,168 @@
 import React from 'react';
 import { 
-  Server, 
-  UserCheck, 
-  Wrench, 
-  Lightbulb, 
+  Wifi, 
+  PhoneCall, 
+  Video, 
   Network, 
+  Server, 
+  Cable, 
+  KeyRound, 
   Check, 
   ArrowRight,
-  Layers
+  Sparkles,
+  ShieldCheck
 } from 'lucide-react';
 
-interface ServiceItem {
-  id: string;
-  title: string;
-  category: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  features: string[];
-  gradient: string;
-  iconColor: string;
-  borderColor: string;
-}
-
 const Services: React.FC = () => {
-  const services: ServiceItem[] = [
+  // All 7 User-Requested Specialized Solutions
+  const allServices = [
     {
-      id: 'infrastructure',
-      title: 'IT Infrastructure',
-      category: 'Enterprise Foundation',
-      description: 'End-to-end IT infrastructure solutions including servers, networks, storage, virtualization, and system setup.',
-      icon: Server,
+      id: 'wireless',
+      title: 'WIRELESS',
+      category: 'High-Speed Wireless',
+      description: 'Next-gen enterprise wireless solutions engineered for seamless high-density roaming, high throughput, and zero dead-zones.',
+      icon: Wifi,
       features: [
-        'Enterprise Server Deployment & Clustering',
-        'SAN / NAS Storage & Backup Architecture',
-        'Virtualization (VMware / Hyper-V / Proxmox)',
-        'Data Center & Rack Cable Management',
+        'Wi-Fi 6, 6E & Wi-Fi 7 Enterprise APs',
+        'Point-to-Point (P2P) & Multipoint Links',
+        'Centralized Cloud Controller Roaming',
+        'RF Heatmap Site Surveys & Spectrum Audits',
       ],
-      gradient: 'from-blue-600/20 to-cyan-500/10',
-      iconColor: 'text-cyan-400',
-      borderColor: 'group-hover:border-cyan-500/50',
     },
     {
-      id: 'staffing',
-      title: 'IT Resource / Staffing',
-      category: 'Human Capital',
-      description: 'Providing skilled IT professionals on contract, project-based, or permanent requirements.',
-      icon: UserCheck,
+      id: 'voip-solutions',
+      title: 'VoIP Solutions',
+      category: 'Unified Communications',
+      description: 'Advanced IP telephony, IP PBX telephone systems, SIP trunking, and unified corporate communications for business agility.',
+      icon: PhoneCall,
       features: [
-        'Contract & On-Demand IT Engineers',
-        'Project-Based Specialist Allocation',
-        'Permanent Tech Talent Recruitment',
-        'Pre-Screened & Certified IT Specialists',
+        'Enterprise IP-PBX & Cloud PBX Setup',
+        'SIP Trunking & Multi-Location Intercom',
+        'Executive Desktop IP Phones & Headsets',
+        'Interactive Voice Response (IVR) & CRM Link',
       ],
-      gradient: 'from-cyan-600/20 to-teal-500/10',
-      iconColor: 'text-teal-400',
-      borderColor: 'group-hover:border-teal-500/50',
     },
     {
-      id: 'services',
-      title: 'IT Services',
-      category: 'Managed Operations',
-      description: 'Comprehensive IT services including maintenance, support, monitoring, and managed services.',
-      icon: Wrench,
+      id: 'video-conferencing',
+      title: 'Video Conferencing Solutions',
+      category: 'Smart Collaboration',
+      description: 'Turnkey boardrooms, huddle rooms, and auditorium video collaboration systems with crystal-clear 4K visual and audio fidelity.',
+      icon: Video,
       features: [
-        '24/7/365 Proactive Uptime Monitoring',
-        'Scheduled Preventive Maintenance',
-        'Patch Management & System Updates',
-        'Managed IT Helpdesk & SLA Support',
+        'Microsoft Teams Rooms & Zoom Rooms',
+        '4K PTZ Optical Cameras & Smart Audio Bars',
+        'Interactive Touch Displays & Digital Whiteboards',
+        'Acoustic Echo Cancellation & Mic Pod Arrays',
       ],
-      gradient: 'from-indigo-600/20 to-blue-500/10',
-      iconColor: 'text-indigo-400',
-      borderColor: 'group-hover:border-indigo-500/50',
     },
     {
-      id: 'consultancy',
-      title: 'IT Consultancy',
-      category: 'Strategic Advisory',
-      description: 'Professional IT consultancy to help businesses plan, optimize, and implement the right technology solutions.',
-      icon: Lightbulb,
-      features: [
-        'Technology Audits & Gap Analysis',
-        'Digital Transformation Roadmaps',
-        'Infrastructure Cost Optimization',
-        'Security, Compliance & Disaster Recovery Plans',
-      ],
-      gradient: 'from-amber-600/20 to-orange-500/10',
-      iconColor: 'text-amber-400',
-      borderColor: 'group-hover:border-amber-500/50',
-    },
-    {
-      id: 'network-support',
-      title: 'Network & System Support',
-      category: 'Connectivity & Endpoints',
-      description: 'Reliable network, system, workstation, and infrastructure support to keep business operations running smoothly.',
+      id: 'network-solutions',
+      title: 'Network Solutions',
+      category: 'Active Networking',
+      description: 'Resilient network architectures, high-performance routing, multi-gigabit switching, next-generation firewalls, and SD-WAN.',
       icon: Network,
       features: [
-        'Firewall, VPN & Router Configurations',
-        'Enterprise WiFi & Switch Management',
-        'Workstation & OS Troubleshooting',
-        'Zero-Downtime Migration Support',
+        'Core, Distribution & Managed Edge Switches',
+        'Next-Gen Firewalls (Fortinet / Cisco / Sophos)',
+        'Enterprise SD-WAN & Secure Mesh VPNs',
+        'Bandwidth Optimization & 24/7 Traffic QoS',
       ],
-      gradient: 'from-sky-600/20 to-blue-500/10',
-      iconColor: 'text-sky-400',
-      borderColor: 'group-hover:border-sky-500/50',
+    },
+    {
+      id: 'it-passive-solutions',
+      title: 'IT Passive Solutions',
+      category: 'Infrastructure Backbone',
+      description: 'Rugged server racks, containment enclosures, intelligent power management, and datacenter containment frameworks.',
+      icon: Server,
+      features: [
+        'Server Racks, Floor & Wall Mount Cabinets',
+        'Online UPS Systems & Redundant Power PDU',
+        'Cable Trays, Raceway & Ladder Management',
+        'Environmental & Temperature Telemetry',
+      ],
+    },
+    {
+      id: 'structured-cabling',
+      title: 'Structured Cabling Solutions',
+      category: 'Certified Physical Media',
+      description: 'Standardized Cat6/Cat6A/Cat7 copper network cabling and optical fiber transmission backbones built for maximum longevity.',
+      icon: Cable,
+      features: [
+        'Cat6, Cat6A & Cat7 Shielded Twisted Pair',
+        'Single-Mode & Multi-Mode Optical Fiber Splicing',
+        'High-Density Patch Panels & Keystone Jacking',
+        'Fluke Networks & OTDR Testing Certification',
+      ],
+    },
+    {
+      id: 'softwares-licensing',
+      title: 'Softwares & Licensing',
+      category: 'Enterprise Compliance',
+      description: 'Authorized enterprise software licenses, volume licensing agreements, operating systems, antivirus, and cloud SaaS.',
+      icon: KeyRound,
+      features: [
+        'Microsoft 365, Office & Windows Server CALs',
+        'Endpoint Antivirus & EDR Threat Protection',
+        'Cloud Backup & Disaster Recovery Licenses',
+        'License Audits, Renewals & True-Up Governance',
+      ],
     },
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-[#070D1E] relative overflow-hidden bg-grid-pattern">
-      {/* Ambient background lights */}
-      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="services" className="py-20 lg:py-28 bg-[#F8FAFC] relative overflow-hidden border-t border-b border-slate-200/80">
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mb-4">
-            <Layers className="w-4 h-4" />
-            CORE CAPABILITIES
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#0066FF] mb-2">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>WHAT WE OFFER</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans']">
-            What We <span className="text-gradient">Offer</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A1931] tracking-tight font-['Plus_Jakarta_Sans']">
+            Our Core <span className="text-[#0066FF]">Solutions</span>
           </h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-4 rounded-full" />
-          <p className="text-slate-300 text-base sm:text-lg mt-4 max-w-2xl mx-auto font-normal">
-            Tailored IT infrastructure, resource staffing, and managed consulting services engineered for modern enterprises in Udaipur and nationwide.
+          <div className="w-16 h-1 bg-[#0066FF] mx-auto mt-4 rounded-full" />
+          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
+            End-to-end active & passive IT infrastructure, wireless, VoIP, video collaboration, structured cabling, and genuine software licensing engineered for enterprises.
           </p>
         </div>
 
-        {/* Services Grid (3 cards top, 2 cards bottom centered) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 3).map((service) => {
+        {/* Services Grid (All 7 Solution Categories) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {allServices.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.id}
-                className={`group rounded-2xl bg-gradient-to-b from-[#0F1B3B] to-[#0A122A] p-7 border border-brand-navy-border ${service.borderColor} shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between`}
+                className="rounded-2xl bg-white p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/60 ${service.iconColor} group-hover:scale-110 transition-transform duration-300 shadow-inner`}>
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700">
+                  {/* Solid Blue Circle Icon */}
+                  <div className="w-14 h-14 rounded-full bg-[#0066FF] text-white flex items-center justify-center mb-5 shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-7 h-7" />
+                  </div>
+
+                  <div className="mb-2">
+                    <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-blue-50 text-[#0066FF]">
                       {service.category}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-bold text-[#0A1931] mb-2 group-hover:text-[#0066FF] transition-colors">
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-slate-300 mb-6 leading-relaxed">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-5 font-normal">
                     {service.description}
                   </p>
 
                   {/* Feature Checklist */}
-                  <div className="space-y-2.5 pt-4 border-t border-slate-800/80 mb-6">
+                  <div className="space-y-2 pt-4 border-t border-slate-100 mb-6">
                     {service.features.map((feat, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <div className="p-0.5 rounded bg-cyan-500/10 text-cyan-400 shrink-0 mt-0.5">
-                          <Check className="w-3.5 h-3.5" />
-                        </div>
+                      <div key={idx} className="flex items-start gap-2 text-[11px] text-slate-700">
+                        <Check className="w-3.5 h-3.5 text-[#0066FF] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -171,78 +171,77 @@ const Services: React.FC = () => {
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center text-xs font-semibold text-cyan-400 group-hover:text-cyan-300 pt-2 transition-colors"
+                  className="inline-flex items-center text-xs font-bold text-[#0066FF] group-hover:text-[#0052CC] transition-colors pt-2"
                 >
-                  <span>Request Service Consultation</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                  <span>Request Solution Quote</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             );
           })}
-        </div>
 
-        {/* Bottom 2 Services in 2-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
-          {services.slice(3, 5).map((service) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={service.id}
-                className={`group rounded-2xl bg-gradient-to-b from-[#0F1B3B] to-[#0A122A] p-7 border border-brand-navy-border ${service.borderColor} shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between`}
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/60 ${service.iconColor} group-hover:scale-110 transition-transform duration-300 shadow-inner`}>
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700">
-                      {service.category}
-                    </span>
-                  </div>
+          {/* 8th Card: Overall IT Infrastructure & Consultancy */}
+          <div className="rounded-2xl bg-gradient-to-br from-[#0A1931] to-[#051124] text-white p-7 shadow-xl flex flex-col justify-between border border-blue-900">
+            <div>
+              <div className="w-14 h-14 rounded-full bg-[#0066FF] text-white flex items-center justify-center mb-5 shadow-md shadow-blue-500/30">
+                <ShieldCheck className="w-7 h-7" />
+              </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {service.title}
-                  </h3>
+              <div className="mb-2">
+                <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-blue-500/20 text-[#38BDF8]">
+                  Full-Lifecycle IT
+                </span>
+              </div>
 
-                  <p className="text-sm text-slate-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
+              <h3 className="text-lg font-bold text-white mb-2">
+                IT Infrastructure & Consultancy
+              </h3>
 
-                  <div className="space-y-2.5 pt-4 border-t border-slate-800/80 mb-6">
-                    {service.features.map((feat, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <div className="p-0.5 rounded bg-cyan-500/10 text-cyan-400 shrink-0 mt-0.5">
-                          <Check className="w-3.5 h-3.5" />
-                        </div>
-                        <span>{feat}</span>
-                      </div>
-                    ))}
-                  </div>
+              <p className="text-xs text-slate-300 leading-relaxed mb-5 font-normal">
+                Complete hardware procurement, dedicated IT engineer staffing, preventive maintenance, and strategic infrastructure advisory.
+              </p>
+
+              <div className="space-y-2 pt-4 border-t border-slate-700/80 mb-6 text-[11px] text-slate-300">
+                <div className="flex items-center gap-2">
+                  <Check className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <span>Turnkey Data Center Builds</span>
                 </div>
-
-                <a
-                  href="#contact"
-                  className="inline-flex items-center text-xs font-semibold text-cyan-400 group-hover:text-cyan-300 pt-2 transition-colors"
-                >
-                  <span>Request Service Consultation</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                <div className="flex items-center gap-2">
+                  <Check className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <span>Dedicated On-Site IT Engineers</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <span>24/7 SLA & Preventive Maintenance</span>
+                </div>
               </div>
-            );
-          })}
+            </div>
+
+            <a
+              href="#contact"
+              className="w-full py-2.5 rounded-xl bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold text-xs text-center transition-colors shadow-md"
+            >
+              Get Custom Consultation
+            </a>
+          </div>
+
         </div>
 
-        {/* CTA banner below services */}
-        <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-blue-900/40 via-cyan-900/30 to-slate-900/60 border border-cyan-500/30 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 backdrop-blur-md">
-          <div className="space-y-1">
-            <h3 className="text-xl font-bold text-white">Need a customized IT package for your enterprise?</h3>
-            <p className="text-sm text-slate-300">Our consultants in Udaipur analyze your current IT landscape and propose optimal architectures.</p>
+        {/* Custom Quote CTA Banner */}
+        <div className="mt-14 p-8 rounded-2xl bg-[#0A1931] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="space-y-1 text-center sm:text-left">
+            <h3 className="text-xl font-bold font-['Plus_Jakarta_Sans']">
+              Planning a new office network or video conferencing setup?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300">
+              Our team in Udaipur conducts site surveys and provides comprehensive active & passive network layout blueprints.
+            </p>
           </div>
           <a
             href="#contact"
-            className="shrink-0 px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-colors shadow-lg shadow-cyan-500/20"
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-blue-500/25"
           >
-            Get Custom Quote
+            Get Free Site Survey
           </a>
         </div>
 

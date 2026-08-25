@@ -1,8 +1,11 @@
 # X Tech Infra - Corporate Website
 
-A modern, high-performance, fully responsive corporate website for **X Tech Infra** — IT Infrastructure, Resource, Service, and Consultancy based in **Udaipur, Rajasthan, India**.
+A modern, high-performance, fully responsive corporate website for **X Tech Infra** — IT Infrastructure, Resource, Equipment, Software, License, Service, and Consultancy based in **Udaipur, Rajasthan, India**.
 
 Built with **React**, **Vite**, **TypeScript**, **Tailwind CSS**, and **Lucide React**.
+
+- **Call Us**: `+91 78773 58968`
+- **Email Us**: `xtisupport@gmail.com`
 
 ---
 
@@ -24,7 +27,7 @@ src/
 │   ├── Navbar.tsx        # Sticky glassmorphism header & mobile navigation
 │   ├── Hero.tsx          # High-impact hero with tech graphics & highlights
 │   ├── About.tsx         # Story, mission, vision & Udaipur tech hub showcase
-│   ├── Services.tsx      # 5 core IT services with feature checklists
+│   ├── Services.tsx      # 7 core IT services with feature checklists
 │   ├── WhyChooseUs.tsx   # 4 value proposition cards & metrics
 │   ├── Expertise.tsx     # 8 technical competency areas & progress bars
 │   ├── Contact.tsx       # Contact cards, WhatsApp link & interactive form

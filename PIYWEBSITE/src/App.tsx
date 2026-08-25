@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import SolutionsSlider from './components/SolutionsSlider';
 import About from './components/About';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -13,7 +14,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'about', 'services', 'why-choose-us', 'expertise', 'contact'];
+    const sections = ['home', 'solutions-gallery', 'about', 'services', 'why-choose-us', 'expertise', 'contact'];
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -37,13 +38,14 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#070D1E] text-slate-100 font-sans selection:bg-cyan-500 selection:text-white">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-[#0066FF] selection:text-white">
       {/* Navigation */}
       <Navbar activeSection={activeSection} />
 
       {/* Main Content Sections */}
       <main>
         <Hero />
+        <SolutionsSlider />
         <About />
         <Services />
         <WhyChooseUs />
@@ -57,7 +59,7 @@ function App() {
       {/* Floating Quick WhatsApp Action Button */}
       <aside aria-label="Quick contact" className="fixed bottom-6 right-6 z-40">
         <a
-          href="https://wa.me/919876543210?text=Hello%20X%20Tech%20Infra,%20I%20am%20interested%20in%20your%20IT%20services."
+          href="https://wa.me/917877358968?text=Hello%20X%20Tech%20Infra,%20I%20am%20interested%20in%20your%20IT%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-2xl shadow-emerald-500/30 hover:scale-105 transition-all duration-300 group"

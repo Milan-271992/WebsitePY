@@ -7,7 +7,8 @@ import {
   CheckCircle2, 
   Zap,
   TrendingUp,
-  Award
+  Award,
+  Sparkles
 } from 'lucide-react';
 
 const WhyChooseUs: React.FC = () => {
@@ -18,48 +19,36 @@ const WhyChooseUs: React.FC = () => {
       subtitle: 'Certified Engineers & Architects',
       description: 'Our team comprises multi-certified IT architects, systems specialists, and network administrators with hands-on enterprise deployment experience.',
       icon: Award,
-      color: 'text-cyan-400',
-      bgGradient: 'from-cyan-500/10 to-blue-500/5',
-      borderColor: 'border-cyan-500/30',
       badge: 'Certified Team',
       metric: '10+ Years',
       metricLabel: 'Industry Track Record',
     },
     {
       id: 'support',
-      title: 'Reliable Support',
+      title: 'Reliable 24/7 Support',
       subtitle: 'Rapid Response & SLA Commitment',
-      description: 'We deliver dependable 24/7 technical support and rapid incident mitigation, ensuring your servers and network infrastructure experience minimum downtime.',
+      description: 'We deliver dependable 24/7 technical support and rapid incident mitigation, ensuring your servers and network infrastructure experience zero downtime.',
       icon: Clock,
-      color: 'text-emerald-400',
-      bgGradient: 'from-emerald-500/10 to-teal-500/5',
-      borderColor: 'border-emerald-500/30',
       badge: '24/7 / 365',
       metric: '< 15 Mins',
       metricLabel: 'Critical Response Time',
     },
     {
       id: 'solutions',
-      title: 'Customized Solutions',
+      title: 'Customized Architecture',
       subtitle: 'Tailored to Business Requirements',
-      description: 'We do not believe in one-size-fits-all. Every infrastructure blueprint and resource deployment is customized specifically to your operational demands.',
+      description: 'We do not believe in one-size-fits-all. Every infrastructure blueprint, hardware deployment, and license package is customized specifically to your demands.',
       icon: Sliders,
-      color: 'text-blue-400',
-      bgGradient: 'from-blue-500/10 to-indigo-500/5',
-      borderColor: 'border-blue-500/30',
       badge: '100% Tailored',
       metric: 'Bespoke',
       metricLabel: 'Architecture Design',
     },
     {
       id: 'cost-effective',
-      title: 'Cost Effective',
+      title: 'Cost Effective Procurement',
       subtitle: 'Optimized ROI & Zero Waste',
-      description: 'Maximize your technology ROI through lean infrastructure designs, optimized staffing models, and strategic procurement without compromising quality.',
+      description: 'Maximize your technology ROI through authorized OEM hardware discounts, volume licensing advisory, and optimized IT staffing models.',
       icon: DollarSign,
-      color: 'text-amber-400',
-      bgGradient: 'from-amber-500/10 to-orange-500/5',
-      borderColor: 'border-amber-500/30',
       badge: 'Max ROI',
       metric: '30-40%',
       metricLabel: 'Cost Efficiency',
@@ -67,23 +56,20 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 lg:py-32 bg-[#0A1128] relative overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-700/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="why-choose-us" className="py-20 lg:py-28 bg-[#F8FAFC] relative overflow-hidden border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mb-4">
-            <ShieldCheck className="w-4 h-4" />
-            WHY WORK WITH US
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#0066FF] mb-2">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>WHY CHOOSE US</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans']">
-            Partner You <span className="text-gradient">Can Rely On</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A1931] tracking-tight font-['Plus_Jakarta_Sans']">
+            Partner You <span className="text-[#0066FF]">Can Rely On</span>
           </h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-4 rounded-full" />
-          <p className="text-slate-300 text-base sm:text-lg mt-4 max-w-2xl mx-auto font-normal">
+          <div className="w-16 h-1 bg-[#0066FF] mx-auto mt-4 rounded-full" />
+          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal">
             Building long-term partnerships with high transparency, enterprise-grade discipline, and proactive technology stewardship.
           </p>
         </div>
@@ -95,39 +81,39 @@ const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className={`relative rounded-2xl bg-gradient-to-br ${item.bgGradient} bg-[#0D1836] p-8 border ${item.borderColor} shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group`}
+                className="rounded-2xl bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 group"
               >
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-5">
                   <div className="flex items-center gap-4">
-                    <div className={`p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/60 ${item.color} group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                      <Icon className="w-7 h-7" />
+                    <div className="w-13 h-13 p-3 rounded-2xl bg-blue-50 text-[#0066FF] border border-blue-100 group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300 shadow-sm">
+                      <Icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                      <h3 className="text-xl font-bold text-[#0A1931] group-hover:text-[#0066FF] transition-colors">
                         {item.title}
                       </h3>
-                      <div className="text-xs font-medium text-slate-400 mt-0.5">
+                      <div className="text-xs font-medium text-slate-500 mt-0.5">
                         {item.subtitle}
                       </div>
                     </div>
                   </div>
 
-                  <span className="self-start px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-800/90 text-cyan-300 border border-cyan-500/20">
+                  <span className="self-start px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-50 text-[#0066FF] border border-blue-100">
                     {item.badge}
                   </span>
                 </div>
 
-                <p className="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                   {item.description}
                 </p>
 
                 {/* Metric Strip */}
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs text-slate-400">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+                    <CheckCircle2 className="w-4 h-4 text-[#0066FF]" />
                     <span>{item.metricLabel}</span>
                   </div>
-                  <span className="text-sm font-bold font-mono text-white px-2 py-0.5 rounded bg-slate-900/80 border border-slate-700">
+                  <span className="text-xs font-black font-mono text-[#0A1931] px-2.5 py-1 rounded bg-slate-100 border border-slate-200">
                     {item.metric}
                   </span>
                 </div>
@@ -137,37 +123,37 @@ const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Bottom Trust Indicators */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <div className="flex items-center justify-center gap-1.5 text-cyan-400 mb-1">
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+            <div className="flex items-center justify-center gap-1.5 text-[#0066FF] mb-1">
               <Zap className="w-4 h-4" />
-              <span className="text-xs font-semibold uppercase">High Speed</span>
+              <span className="text-[11px] font-bold uppercase">High Speed</span>
             </div>
-            <div className="text-xl font-bold text-white font-mono">Agile Delivery</div>
+            <div className="text-base sm:text-lg font-black text-[#0A1931] font-mono">Agile Delivery</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <div className="flex items-center justify-center gap-1.5 text-blue-400 mb-1">
+          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+            <div className="flex items-center justify-center gap-1.5 text-[#0066FF] mb-1">
               <TrendingUp className="w-4 h-4" />
-              <span className="text-xs font-semibold uppercase">Scalability</span>
+              <span className="text-[11px] font-bold uppercase">Scalability</span>
             </div>
-            <div className="text-xl font-bold text-white font-mono">Ready to Grow</div>
+            <div className="text-base sm:text-lg font-black text-[#0A1931] font-mono">Ready to Grow</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <div className="flex items-center justify-center gap-1.5 text-emerald-400 mb-1">
+          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+            <div className="flex items-center justify-center gap-1.5 text-emerald-600 mb-1">
               <ShieldCheck className="w-4 h-4" />
-              <span className="text-xs font-semibold uppercase">Security</span>
+              <span className="text-[11px] font-bold uppercase">Security</span>
             </div>
-            <div className="text-xl font-bold text-white font-mono">Zero Compromise</div>
+            <div className="text-base sm:text-lg font-black text-[#0A1931] font-mono">100% Compliant</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
-            <div className="flex items-center justify-center gap-1.5 text-purple-400 mb-1">
+          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+            <div className="flex items-center justify-center gap-1.5 text-purple-600 mb-1">
               <Award className="w-4 h-4" />
-              <span className="text-xs font-semibold uppercase">Quality</span>
+              <span className="text-[11px] font-bold uppercase">Quality</span>
             </div>
-            <div className="text-xl font-bold text-white font-mono">Guaranteed SLAs</div>
+            <div className="text-base sm:text-lg font-black text-[#0A1931] font-mono">Guaranteed SLAs</div>
           </div>
         </div>
 

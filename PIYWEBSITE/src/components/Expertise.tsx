@@ -1,13 +1,13 @@
 import React from 'react';
 import { 
-  Server, 
-  Network, 
-  Terminal, 
-  Cloud, 
-  Users, 
-  LifeBuoy, 
-  Activity, 
-  Briefcase,
+  Wifi,
+  PhoneCall,
+  Video,
+  Network,
+  Server,
+  Cable,
+  KeyRound,
+  ShieldCheck,
   CheckCircle,
   Cpu
 } from 'lucide-react';
@@ -24,128 +24,124 @@ interface ExpertiseDomain {
 const Expertise: React.FC = () => {
   const domains: ExpertiseDomain[] = [
     {
-      name: 'IT Infrastructure',
-      category: 'Core Hardware & DC',
+      name: 'WIRELESS & Mobility',
+      category: 'Enterprise Wireless',
       level: 98,
-      icon: Server,
-      tags: ['Rack Servers', 'SAN/NAS', 'Blade Systems', 'Redundancy'],
-      description: 'Physical & logical architecture design, enterprise hyper-converged hardware installation, and data center lifecycle management.',
+      icon: Wifi,
+      tags: ['Wi-Fi 6/7 APs', 'P2P Bridges', 'Heatmaps', 'Seamless Roam'],
+      description: 'High-density controller roaming, RF spectrum site surveys, outdoor wireless bridges, and campus mesh coverage.',
     },
     {
-      name: 'Network Management',
-      category: 'Routing & Security',
-      level: 95,
-      icon: Network,
-      tags: ['Cisco / Fortinet', 'VLANs', 'SD-WAN', 'Next-Gen Firewalls'],
-      description: 'High-throughput enterprise routing, mesh switching, policy-driven firewalls, and encrypted multi-site VPN tunnels.',
-    },
-    {
-      name: 'System Administration',
-      category: 'OS & Directory Services',
+      name: 'VoIP Solutions',
+      category: 'Unified Telephony',
       level: 96,
-      icon: Terminal,
-      tags: ['Active Directory', 'Linux (RHEL/Ubuntu)', 'Windows Server', 'IAM'],
-      description: 'Centralized identity management, group policy governance, automated patch rollout, and cross-platform server provisioning.',
+      icon: PhoneCall,
+      tags: ['IP PBX Systems', 'SIP Trunks', 'IP Phones', 'Multi-site Call'],
+      description: 'Enterprise IP PBX setup, cloud VoIP trunks, automated attendant IVR, and zero-jitter voice routing over WAN.',
     },
     {
-      name: 'Cloud & Virtualization',
-      category: 'Hybrid Environments',
-      level: 94,
-      icon: Cloud,
-      tags: ['VMware ESXi', 'Hyper-V', 'Proxmox', 'AWS / Azure Hybrid'],
-      description: 'Virtual machine clusters, high-availability live migration, scalable container orchestrations, and cloud-to-onprem integration.',
-    },
-    {
-      name: 'IT Resource Management',
-      category: 'Talent & Staffing',
-      level: 95,
-      icon: Users,
-      tags: ['Contract Staffing', 'L1/L2/L3 Engineers', 'DevOps Staff', 'Project Leads'],
-      description: 'Vetted technical staffing, engineering bench mobilization, on-site/remote support resource allocations, and talent payroll management.',
-    },
-    {
-      name: 'Technical Support',
-      category: 'Endpoint & Helpdesk',
-      level: 99,
-      icon: LifeBuoy,
-      tags: ['24/7 Ticketing', 'Remote Assistance', 'Hardware Diagnostics', 'Zero Lag'],
-      description: 'Rapid-response troubleshooting for workstations, peripherals, enterprise software stacks, and mission-critical emergency recovery.',
-    },
-    {
-      name: 'Managed IT Services',
-      category: 'Proactive Operations',
+      name: 'Video Conferencing',
+      category: 'Smart Meeting Rooms',
       level: 97,
-      icon: Activity,
-      tags: ['SLA Management', 'Backup Audits', 'Uptime Telemetry', 'Disaster Recovery'],
-      description: 'Continuous proactive health monitoring, automated backups, scheduled health checks, and preventive infrastructure optimization.',
+      icon: Video,
+      tags: ['Teams Rooms', 'Zoom Rooms', '4K PTZ Cams', 'Interactive AV'],
+      description: 'Turnkey boardrooms, acoustic array audio, smart digital whiteboards, and immersive hybrid meeting room integration.',
     },
     {
-      name: 'Technology Consultancy',
-      category: 'Strategic Advisory',
-      level: 93,
-      icon: Briefcase,
-      tags: ['IT Roadmapping', 'Cost Optimization', 'Vendor Audits', 'Compliance'],
-      description: 'Executive guidance on IT modernization, software license audits, IT expenditure rationalization, and cyber-resilience policies.',
+      name: 'Network Solutions',
+      category: 'Active Core Switching',
+      level: 99,
+      icon: Network,
+      tags: ['Cisco / Fortinet', 'Layer 3 Switching', 'SD-WAN', 'Next-Gen Firewall'],
+      description: 'Enterprise high-throughput routing, network security hardening, policy-based traffic shaping, and site-to-site VPN meshes.',
+    },
+    {
+      name: 'IT Passive Solutions',
+      category: 'Datacenter Racks & Power',
+      level: 97,
+      icon: Server,
+      tags: ['Server Racks', 'Smart PDUs', 'UPS Backup', 'Raceway Trays'],
+      description: 'Heavy-duty 42U/24U server rack enclosures, online UPS redundancy, cable management trays, and thermal containment.',
+    },
+    {
+      name: 'Structured Cabling',
+      category: 'Copper & Fiber Media',
+      level: 99,
+      icon: Cable,
+      tags: ['Cat6 / Cat6A', 'Optical Fiber', 'OTDR Testing', 'Patch Panels'],
+      description: 'Certified Cat6A copper termination, optical fiber splicing, patch bay organization, and Fluke Networks certification.',
+    },
+    {
+      name: 'Softwares & Licensing',
+      category: 'Genuine Compliance',
+      level: 96,
+      icon: KeyRound,
+      tags: ['Microsoft 365', 'Server CALs', 'Endpoint EDR', 'Cloud SaaS'],
+      description: 'Genuine volume licensing procurement, Windows Server client licenses, enterprise antivirus, and license compliance audits.',
+    },
+    {
+      name: 'IT Infrastructure & DC',
+      category: 'Turnkey Foundation',
+      level: 98,
+      icon: ShieldCheck,
+      tags: ['Blade Servers', 'SAN Storage', 'VMware / Hyper-V', '24/7 SLA'],
+      description: 'End-to-end hyper-converged hardware installation, multi-tier storage arrays, virtualization clusters, and managed IT services.',
     },
   ];
 
   return (
-    <section id="expertise" className="py-20 lg:py-32 bg-[#070D1E] relative overflow-hidden bg-dot-pattern">
-      {/* Background Gradients */}
-      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="expertise" className="py-20 lg:py-28 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mb-4">
-            <Cpu className="w-4 h-4" />
-            TECHNICAL PROFICIENCY
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#0066FF] mb-2">
+            <Cpu className="w-3.5 h-3.5" />
+            <span>TECHNICAL PROFICIENCY</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans']">
-            Our <span className="text-gradient">Expertise</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A1931] tracking-tight font-['Plus_Jakarta_Sans']">
+            Our <span className="text-[#0066FF]">Expertise</span>
           </h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mt-4 rounded-full" />
-          <p className="text-slate-300 text-base sm:text-lg mt-4 max-w-2xl mx-auto font-normal">
+          <div className="w-16 h-1 bg-[#0066FF] mx-auto mt-4 rounded-full" />
+          <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto font-normal">
             Proven competencies across full-stack IT infrastructure, advanced networking, resource management, and enterprise advisory.
           </p>
         </div>
 
-        {/* 8 Expertise Cards in 2x4 or 4x2 Responsive Grid */}
+        {/* 8 Expertise Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {domains.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="rounded-2xl bg-gradient-to-b from-[#0E1A38] to-[#081024] p-6 border border-brand-navy-border hover:border-cyan-500/50 shadow-xl hover:shadow-cyan-500/15 transition-all duration-300 flex flex-col justify-between group"
+                className="rounded-2xl bg-white p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Top Row: Icon and Category */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 rounded-xl bg-slate-900/90 text-cyan-400 border border-slate-700/60 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-300">
-                      <Icon className="w-6 h-6" />
+                    <div className="p-3 rounded-xl bg-blue-50 text-[#0066FF] border border-blue-100 group-hover:scale-110 group-hover:bg-[#0066FF] group-hover:text-white transition-all duration-300">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">
                       {item.category}
                     </span>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-base font-bold text-[#0A1931] mb-1.5 group-hover:text-[#0066FF] transition-colors">
                     {item.name}
                   </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
                     {item.description}
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-6">
+                  <div className="flex flex-wrap gap-1 mb-5">
                     {item.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[10px] px-2 py-0.5 rounded bg-slate-900/90 text-slate-300 border border-slate-800"
+                        className="text-[10px] px-2 py-0.5 rounded bg-slate-50 text-slate-600 border border-slate-200"
                       >
                         {tag}
                       </span>
@@ -154,17 +150,17 @@ const Expertise: React.FC = () => {
                 </div>
 
                 {/* Progress Bar & Proficiency Indicator */}
-                <div className="pt-3 border-t border-slate-800/80">
-                  <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-slate-400 font-medium flex items-center gap-1">
-                      <CheckCircle className="w-3 h-3 text-cyan-400" />
+                <div className="pt-3 border-t border-slate-100">
+                  <div className="flex justify-between items-center text-xs mb-1.5 font-medium">
+                    <span className="text-slate-500 flex items-center gap-1">
+                      <CheckCircle className="w-3.5 h-3.5 text-[#0066FF]" />
                       Proficiency SLA
                     </span>
-                    <span className="font-mono font-bold text-cyan-400">{item.level}%</span>
+                    <span className="font-mono font-bold text-[#0066FF]">{item.level}%</span>
                   </div>
-                  <div className="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden border border-slate-800">
+                  <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
                     <div
-                      className="bg-gradient-to-r from-blue-500 to-cyan-400 h-1.5 rounded-full transition-all duration-1000 ease-out"
+                      className="bg-[#0066FF] h-1.5 rounded-full"
                       style={{ width: `${item.level}%` }}
                     />
                   </div>
@@ -176,15 +172,15 @@ const Expertise: React.FC = () => {
         </div>
 
         {/* Bottom Technology Stack Badges */}
-        <div className="mt-16 p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80">
-          <div className="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
+        <div className="mt-14 p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200">
+          <div className="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">
             Technologies, Frameworks & Vendor Standards We Support
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-slate-300 font-medium">
-            {['Cisco', 'Fortinet', 'Dell EMC', 'HP Enterprise', 'VMware', 'Microsoft Hyper-V', 'Ubuntu Server', 'Red Hat Enterprise Linux', 'Windows Server 2022/2025', 'MikroTik', 'Synology NAS', 'Veeam Backup', 'Ubiquiti UniFi'].map((tech, i) => (
+          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs text-slate-700 font-semibold">
+            {['Cisco', 'Fortinet', 'Dell Technologies', 'HP Enterprise', 'VMware', 'Microsoft Hyper-V', 'Windows Server 2025', 'Microsoft 365', 'Ubuntu Server', 'Red Hat Linux', 'MikroTik', 'Synology NAS', 'Veeam Backup', 'Ubiquiti UniFi'].map((tech, i) => (
               <span
                 key={i}
-                className="px-3 py-1.5 rounded-lg bg-slate-950/80 border border-slate-800 hover:border-cyan-500/40 hover:text-cyan-300 transition-colors"
+                className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm hover:border-[#0066FF] hover:text-[#0066FF] transition-colors"
               >
                 {tech}
               </span>

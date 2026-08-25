@@ -9,15 +9,20 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy: '#070D1E',
-          'navy-light': '#0D1730',
-          'navy-card': '#111D3E',
+          primary: '#0066FF',
+          'primary-dark': '#0052CC',
+          'primary-light': '#EBF3FF',
+          navy: '#0A1931',
+          'navy-dark': '#06142E',
+          'navy-card': '#0D1F3D',
           'navy-border': '#1E2D58',
-          blue: '#0284C7',
-          'blue-bright': '#38BDF8',
+          blue: '#0066FF',
+          'blue-bright': '#00A3FF',
           cyan: '#06B6D4',
-          accent: '#2563EB',
-          dark: '#030712'
+          accent: '#0052CC',
+          dark: '#0A1931',
+          surface: '#F8FAFC',
+          'surface-card': '#FFFFFF',
         }
       },
       fontFamily: {

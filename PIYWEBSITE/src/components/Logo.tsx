@@ -1,0 +1,104 @@
+import React from 'react';
+
+interface LogoProps {
+  variant?: 'light' | 'dark' | 'full';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  showSubtitle?: boolean;
+  subtitleText?: string;
+  className?: string;
+}
+
+export const LogoIcon: React.FC<{ size?: number; className?: string; transparent?: boolean }> = ({
+  size = 46,
+  className = '',
+  transparent = true,
+}) => {
+  return (
+    <img
+      src={transparent ? '/logo-icon-transparent.png' : '/logo-icon.png'}
+      alt="XTI Symbol"
+      width={size}
+      height={Math.round((size * 600) / 880)}
+      className={`object-contain shrink-0 ${className}`}
+      onError={(e) => {
+        (e.target as HTMLImageElement).src = '/logo.png';
+      }}
+    />
+  );
+};
+
+const Logo: React.FC<LogoProps> = ({
+  variant = 'light',
+  size = 'md',
+  showSubtitle = true,
+  subtitleText = '— IT INFRASTRUCTURE —',
+  className = '',
+}) => {
+  const isDarkVariant = variant === 'dark';
+  const isFull = variant === 'full';
+
+  const iconSize = size === 'sm' ? 38 : size === 'lg' ? 56 : size === 'xl' ? 70 : 46;
+  const titleSize =
+    size === 'sm' ? 'text-lg' : size === 'lg' ? 'text-2xl' : size === 'xl' ? 'text-3xl' : 'text-xl sm:text-2xl';
+  const subSize =
+    size === 'sm' ? 'text-[9px]' : size === 'lg' ? 'text-xs' : 'text-[10px] tracking-widest';
+
+  if (isFull) {
+    const fullHeight =
+      size === 'sm' ? 'h-10' : size === 'lg' ? 'h-16' : size === 'xl' ? 'h-24' : 'h-12';
+    return (
+      <img
+        src="/logo.png"
+        alt="XTech Infra"
+        className={`${fullHeight} w-auto object-contain ${className}`}
+      />
+    );
+  }
+
+  return (
+    <div className={`flex items-center gap-3 select-none ${className}`}>
+      {isDarkVariant ? (
+        <div className="bg-white/95 p-1.5 rounded-xl shadow-md border border-slate-700/50 flex items-center justify-center shrink-0">
+          <img
+            src="/logo-icon-transparent.png"
+            alt="XTI Logo"
+            className="w-10 h-7 sm:w-12 sm:h-8 object-contain"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/logo.png';
+            }}
+          />
+        </div>
+      ) : (
+        <LogoIcon size={iconSize} transparent={true} />
+      )}
+
+      <div className="flex flex-col">
+        <div className="flex items-center leading-none">
+          <span
+            className={`font-black tracking-tight font-['Plus_Jakarta_Sans'] ${titleSize} ${
+              isDarkVariant ? 'text-white' : 'text-[#0A1931]'
+            }`}
+          >
+            XTech
+          </span>
+          <span
+            className={`font-black tracking-tight font-['Plus_Jakarta_Sans'] ${titleSize} text-[#0066FF] ml-1`}
+          >
+            Infra
+          </span>
+        </div>
+        {showSubtitle && (
+          <span
+            className={`font-bold uppercase mt-1 ${subSize} ${
+              isDarkVariant ? 'text-cyan-300' : 'text-[#0066FF]'
+            }`}
+          >
+            {subtitleText}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Logo;
