@@ -33,7 +33,7 @@ const About: React.FC = () => {
           <div className="lg:col-span-4 space-y-5">
             <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-sm space-y-4">
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                <strong className="text-[#0A1931] font-bold">XTechInfra</strong> is a Udaipur, Rajasthan based company committed to delivering best-in-class Wireless, VoIP, Video Conferencing, Network, IT Passive, Structured Cabling, Software Licensing, and IT Infrastructure Solutions to enterprises across India.
+                <strong className="text-[#0A1931] font-bold">Xtechinfra Technologies</strong> is a Udaipur, Rajasthan based company committed to delivering best-in-class Wireless, VoIP, Video Conferencing, Network, IT Passive, Structured Cabling, Software Licensing, and IT Infrastructure Solutions to enterprises across India.
               </p>
 
               <div className="pt-3 border-t border-slate-200 space-y-2">

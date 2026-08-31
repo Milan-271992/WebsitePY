@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
+import LinkedInIcon from './LinkedInIcon';
 
 interface NavbarProps {
   activeSection: string;
@@ -56,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           <a
             href="#home"
             className="flex items-center focus:outline-none"
-            aria-label="XTechInfra Home"
+            aria-label="Xtechinfra Technologies Home"
           >
             <Logo variant="light" size="md" subtitleText="— IT INFRASTRUCTURE —" />
           </a>
@@ -88,8 +89,19 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             })}
           </nav>
 
-          {/* Desktop Contact Us CTA Button */}
-          <div className="hidden lg:flex items-center">
+          {/* Desktop Contact Us CTA Button & LinkedIn */}
+          <div className="hidden lg:flex items-center gap-2.5">
+            <a
+              href="https://lnkd.in/p/d5-i5jWp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl text-[#0A66C2] hover:text-white hover:bg-[#0A66C2] bg-blue-50/70 border border-blue-200/80 shadow-sm transition-all duration-200"
+              title="Connect with Xtechinfra Technologies on LinkedIn"
+              aria-label="LinkedIn Profile"
+            >
+              <LinkedInIcon className="w-4 h-4" />
+            </a>
+
             <a
               href="#contact"
               onClick={(e) => {
@@ -146,7 +158,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               );
             })}
 
-            <div className="pt-3 mt-2 border-t border-slate-100">
+            <div className="pt-3 mt-2 border-t border-slate-100 flex flex-col gap-2.5">
               <a
                 href="#contact"
                 onClick={(e) => {
@@ -160,6 +172,16 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 }`}
               >
                 Contact Us
+              </a>
+
+              <a
+                href="https://lnkd.in/p/d5-i5jWp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-bold text-[#0A66C2] bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-colors"
+              >
+                <LinkedInIcon className="w-4 h-4" />
+                <span>Connect on LinkedIn</span>
               </a>
             </div>
           </div>

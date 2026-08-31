@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
+import LinkedInIcon from './LinkedInIcon';
 import { 
   MapPin, 
   Phone, 
@@ -7,7 +8,8 @@ import {
   Globe,
   ArrowUp,
   Handshake,
-  CheckCircle2
+  CheckCircle2,
+  ExternalLink
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -91,6 +93,18 @@ const Footer: React.FC = () => {
                 <Globe className="w-4 h-4 text-[#38BDF8] shrink-0" />
                 <span className="font-mono text-cyan-300">www.XTechInfra.com</span>
               </div>
+              <div className="flex items-center gap-2.5 pt-1">
+                <LinkedInIcon className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <a
+                  href="https://lnkd.in/p/d5-i5jWp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white font-bold transition-colors flex items-center gap-1.5 text-cyan-300 group"
+                >
+                  <span>Connect on LinkedIn</span>
+                  <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-white transition-colors" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -157,7 +171,7 @@ const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           
           <div className="flex items-center gap-2">
-            <span>© 2026 <strong className="text-white">XTech Infra</strong>. All Rights Reserved.</span>
+            <span>© 2026 <strong className="text-white">Xtechinfra Technologies</strong>. All Rights Reserved.</span>
             <span className="hidden sm:inline">•</span>
             <span className="hidden sm:inline">Udaipur, Rajasthan, India</span>
           </div>

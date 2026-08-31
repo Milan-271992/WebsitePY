@@ -523,7 +523,7 @@ const SolutionsSlider: React.FC = () => {
                 </a>
 
                 <a
-                  href={`https://wa.me/917877358968?text=Hello%20X%20Tech%20Infra,%20I%20am%20interested%20in%20your%20${encodeURIComponent(currentSlide.title)}%20solutions.`}
+                  href={`https://wa.me/917877358968?text=Hello%20Xtechinfra%20Technologies,%20I%20am%20interested%20in%20your%20${encodeURIComponent(currentSlide.title)}%20solutions.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 text-xs transition-colors"

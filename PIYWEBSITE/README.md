@@ -1,11 +1,12 @@
-# X Tech Infra - Corporate Website
+# Xtechinfra Technologies - Corporate Website
 
-A modern, high-performance, fully responsive corporate website for **X Tech Infra** — IT Infrastructure, Resource, Equipment, Software, License, Service, and Consultancy based in **Udaipur, Rajasthan, India**.
+A modern, high-performance, fully responsive corporate website for **Xtechinfra Technologies** — IT Infrastructure, Resource, Equipment, Software, License, Service, and Consultancy based in **Udaipur, Rajasthan, India**.
 
 Built with **React**, **Vite**, **TypeScript**, **Tailwind CSS**, and **Lucide React**.
 
 - **Call Us**: `+91 78773 58968`
 - **Email Us**: `xtisupport@gmail.com`
+- **LinkedIn**: [https://lnkd.in/p/d5-i5jWp](https://lnkd.in/p/d5-i5jWp)
 
 ---
 
@@ -24,15 +25,17 @@ Built with **React**, **Vite**, **TypeScript**, **Tailwind CSS**, and **Lucide R
 ```text
 src/
 ├── components/
-│   ├── Navbar.tsx        # Sticky glassmorphism header & mobile navigation
+│   ├── Navbar.tsx        # Sticky glassmorphism header, mobile menu & LinkedIn link
 │   ├── Hero.tsx          # High-impact hero with tech graphics & highlights
 │   ├── About.tsx         # Story, mission, vision & Udaipur tech hub showcase
-│   ├── Services.tsx      # 7 core IT services with feature checklists
-│   ├── WhyChooseUs.tsx   # 4 value proposition cards & metrics
-│   ├── Expertise.tsx     # 8 technical competency areas & progress bars
-│   ├── Contact.tsx       # Contact cards, WhatsApp link & interactive form
-│   └── Footer.tsx        # Comprehensive footer with quick links & copyright
-├── App.tsx               # Root component with scroll-spy navigation
+│   ├── Services.tsx      # Core IT services with feature checklists
+│   ├── SolutionsSlider.tsx # Interactive solutions showcase slider
+│   ├── WhyChooseUs.tsx   # Value proposition cards & metrics
+│   ├── Expertise.tsx     # Technical competency areas & progress bars
+│   ├── Contact.tsx       # Contact cards (Call, Email, WhatsApp, LinkedIn) & interactive form
+│   ├── Logo.tsx          # Responsive Xtechinfra Technologies logo
+│   └── Footer.tsx        # Comprehensive footer with quick links, LinkedIn & copyright
+├── App.tsx               # Root component with scroll-spy navigation & floating WhatsApp
 ├── main.tsx              # React DOM entry point
 ├── index.css             # Tailwind CSS & custom glowing effects
 └── vite-env.d.ts         # Vite TypeScript environment types
@@ -84,7 +87,7 @@ vercel
 
 ---
 
-### 🐙 Deploy to GitHub Pages
+## 🐙 Deploy to GitHub Pages
 
 1. In `vite.config.ts`, verify that `base: './'` is set (already configured).
 2. Install `gh-pages` helper (optional) or use GitHub Actions:
@@ -108,5 +111,5 @@ vercel
 
 ## 📄 License & Copyright
 
-© 2026 **X Tech Infra**. All Rights Reserved.  
+© 2026 **Xtechinfra Technologies**. All Rights Reserved.  
 Udaipur, Rajasthan, India.

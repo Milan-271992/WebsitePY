@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LinkedInIcon from './LinkedInIcon';
 import { 
   Phone, 
   Mail, 
@@ -94,8 +95,8 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        {/* Top 3 Quick-Contact Cards (White Cards with Blue Icons) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+        {/* Top 4 Quick-Contact Cards (White Cards with Color Accents) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
           
           {/* Card 1: Call Us */}
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 group">
@@ -134,14 +135,14 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Card 3: WhatsApp */}
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 group">
+          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 group">
             <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all">
               <MessageSquare className="w-6 h-6" />
             </div>
             <h3 className="text-sm font-bold text-[#0A1931] mb-1">WhatsApp</h3>
             <p className="text-xs text-slate-500 mb-2">Instant Chat & Queries</p>
             <a
-              href="https://wa.me/917877358968?text=Hello%20XTechInfra,%20I%20am%20interested%20in%20your%20IT%20services."
+              href="https://wa.me/917877358968?text=Hello%20Xtechinfra%20Technologies,%20I%20am%20interested%20in%20your%20IT%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
@@ -150,6 +151,25 @@ const Contact: React.FC = () => {
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
             <div className="mt-1 text-[11px] text-slate-500">Available 9 AM – 7 PM IST</div>
+          </div>
+
+          {/* Card 4: LinkedIn */}
+          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#0A66C2]/50 transition-all duration-300 group">
+            <div className="w-12 h-12 rounded-xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#0A66C2] group-hover:text-white transition-all">
+              <LinkedInIcon className="w-6 h-6" />
+            </div>
+            <h3 className="text-sm font-bold text-[#0A1931] mb-1">LinkedIn</h3>
+            <p className="text-xs text-slate-500 mb-2">Official Company Network</p>
+            <a
+              href="https://lnkd.in/p/d5-i5jWp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0A66C2] hover:text-[#004182] transition-colors"
+            >
+              <span>View Profile</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+            <div className="mt-1 text-[11px] text-slate-500">Connect with our team</div>
           </div>
 
         </div>
@@ -196,15 +216,25 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-800">
+            <div className="mt-8 pt-6 border-t border-slate-800 space-y-3">
               <a
-                href="https://wa.me/917877358968?text=Hello%20XTechInfra,%20I%20am%20interested%20in%20your%20IT%20services."
+                href="https://wa.me/917877358968?text=Hello%20Xtechinfra%20Technologies,%20I%20am%20interested%20in%20your%20IT%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-600/25 transition-all"
               >
                 <MessageSquare className="w-4 h-4" />
                 Chat with Us on WhatsApp
+              </a>
+
+              <a
+                href="https://lnkd.in/p/d5-i5jWp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0A66C2] hover:bg-[#004182] text-white font-bold text-xs sm:text-sm shadow-lg shadow-blue-700/25 transition-all"
+              >
+                <LinkedInIcon className="w-4 h-4" />
+                Connect on LinkedIn
               </a>
             </div>
           </div>

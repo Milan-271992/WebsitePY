@@ -16,7 +16,7 @@ app.use(express.json());
 // Transporter configuration for Gmail
 const createTransporter = () => {
   const user = process.env.EMAIL_USER || 'Xtisupport@gmail.com';
-  const pass = process.env.EMAIL_PASS || 'Rockstar14557';
+  const pass = process.env.EMAIL_PASS || 'Rockstar@987';
 
   return nodemailer.createTransport({
     service: 'gmail',
@@ -68,8 +68,9 @@ app.post('/api/send-enquiry', async (req, res) => {
   const transporter = createTransporter();
 
   // 1. Email notification to Admin (Xtisupport@gmail.com)
+  // 1. Email notification to Admin (Xtisupport@gmail.com)
   const adminMailOptions = {
-    from: `"XTech Infra Website Inquiry" <${emailUser}>`,
+    from: `"Xtechinfra Technologies Inquiry" <${emailUser}>`,
     to: receiverEmail,
     replyTo: `"${name}" <${email}>`,
     subject: `🔔 New IT Inquiry: ${name} (${service || 'General Scoping'})`,
@@ -99,7 +100,7 @@ app.post('/api/send-enquiry', async (req, res) => {
         <div class="container">
           <div class="header">
             <h1>New IT Solution Inquiry</h1>
-            <p>Received via XTech Infra Website Contact Portal</p>
+            <p>Received via Xtechinfra Technologies Website Contact Portal</p>
           </div>
           <div class="content">
             <span class="badge">${service || 'IT Inquiry'}</span>
@@ -132,11 +133,11 @@ app.post('/api/send-enquiry', async (req, res) => {
             </div>
 
             <div style="text-align: center; margin-top: 24px;">
-              <a href="mailto:${email}?subject=RE: XTech Infra Inquiry - ${encodeURIComponent(service || 'Solutions')}" class="btn">Reply to ${name}</a>
+              <a href="mailto:${email}?subject=RE: Xtechinfra Technologies Inquiry - ${encodeURIComponent(service || 'Solutions')}" class="btn">Reply to ${name}</a>
             </div>
           </div>
           <div class="footer">
-            XTech Infra • 12, Madhav Colony, Kalkamata Road, Udaipur, Rajasthan 313001<br>
+            Xtechinfra Technologies • 12, Madhav Colony, Kalkamata Road, Udaipur, Rajasthan 313001<br>
             Direct Inquiry Notification System
           </div>
         </div>
@@ -147,10 +148,10 @@ app.post('/api/send-enquiry', async (req, res) => {
 
   // 2. Customer Auto-Acknowledgment Email
   const customerMailOptions = {
-    from: `"XTech Infra Support" <${emailUser}>`,
+    from: `"Xtechinfra Technologies Support" <${emailUser}>`,
     to: email,
-    subject: `Thank you for contacting XTech Infra - We have received your inquiry`,
-    text: `Hello ${name},\n\nThank you for reaching out to XTech Infra. We have received your inquiry regarding "${service}".\n\nOur technical team will review your requirement and reach out to you within 2 business hours.\n\nWarm regards,\nXTech Infra Team\nContact: +91 7877358968\nEmail: xtisupport@gmail.com\nWebsite: www.XTechInfra.com`,
+    subject: `Thank you for contacting Xtechinfra Technologies - We have received your inquiry`,
+    text: `Hello ${name},\n\nThank you for reaching out to Xtechinfra Technologies. We have received your inquiry regarding "${service}".\n\nOur technical team will review your requirement and reach out to you within 2 business hours.\n\nWarm regards,\nXtechinfra Technologies Team\nContact: +91 7877358968\nEmail: xtisupport@gmail.com\nLinkedIn: https://lnkd.in/p/d5-i5jWp\nWebsite: www.XTechInfra.com`,
     html: `
       <!DOCTYPE html>
       <html>
@@ -169,7 +170,7 @@ app.post('/api/send-enquiry', async (req, res) => {
       <body>
         <div class="container">
           <div class="header">
-            <h1>XTech Infra</h1>
+            <h1>Xtechinfra Technologies</h1>
             <p style="margin: 4px 0 0; font-size: 12px; color: #94a3b8;">Smart Systems • Solid Structures</p>
           </div>
           <div class="content">
@@ -184,13 +185,13 @@ app.post('/api/send-enquiry', async (req, res) => {
             </div>
 
             <p>One of our consultants will connect with you within <strong>2 business hours</strong> to discuss your specifications and provide an initial scoping quote.</p>
-            <p>If you have urgent technical support needs, you can also reach us directly via WhatsApp at <a href="https://wa.me/917877358968" style="color: #0066FF; font-weight: bold;">+91 7877358968</a>.</p>
+            <p>If you have urgent technical support needs, you can also reach us directly via WhatsApp at <a href="https://wa.me/917877358968" style="color: #0066FF; font-weight: bold;">+91 7877358968</a> or connect on <a href="https://lnkd.in/p/d5-i5jWp" style="color: #0A66C2; font-weight: bold;">LinkedIn</a>.</p>
             
-            <p style="margin-top: 24px;">Warm regards,<br><strong>XTech Infra Team</strong></p>
+            <p style="margin-top: 24px;">Warm regards,<br><strong>Xtechinfra Technologies Team</strong></p>
           </div>
           <div class="footer">
             12, Madhav Colony, Kalkamata Road, Opp Krishna Dental Clinic, Udaipur, Rajasthan - 313001<br>
-            Email: <a href="mailto:xtisupport@gmail.com" style="color: #0066FF;">xtisupport@gmail.com</a> | Tel: +91 7877358968
+            Email: <a href="mailto:xtisupport@gmail.com" style="color: #0066FF;">xtisupport@gmail.com</a> | Tel: +91 7877358968 | <a href="https://lnkd.in/p/d5-i5jWp" style="color: #0A66C2;">LinkedIn</a>
           </div>
         </div>
       </body>
@@ -233,7 +234,7 @@ app.post('/api/send-enquiry', async (req, res) => {
 // Start Express server
 app.listen(PORT, () => {
   console.log(`=========================================`);
-  console.log(`  XTech Infra Inquiry Server Running    `);
+  console.log(`  Xtechinfra Technologies Inquiry Server `);
   console.log(`  Port: ${PORT}                          `);
   console.log(`  Configured Gmail: ${process.env.EMAIL_USER || 'Xtisupport@gmail.com'}`);
   console.log(`=========================================`);
