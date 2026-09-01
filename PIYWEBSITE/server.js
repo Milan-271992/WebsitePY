@@ -16,7 +16,8 @@ app.use(express.json());
 // Transporter configuration for Gmail
 const createTransporter = () => {
   const user = process.env.EMAIL_USER || 'Xtisupport@gmail.com';
-  const pass = process.env.EMAIL_PASS || 'Rockstar@987';
+  const rawPass = process.env.EMAIL_PASS || 'dweotlvpmbwlklbu';
+  const pass = rawPass.replace(/\s+/g, '');
 
   return nodemailer.createTransport({
     service: 'gmail',
