@@ -55,7 +55,7 @@ const About: React.FC = () => {
             <div className="p-4 rounded-xl bg-blue-50/80 border border-blue-200/60 flex items-center justify-between">
               <div>
                 <div className="text-xs font-black text-[#0A1931] uppercase">Smart Systems</div>
-                <div className="text-xs font-medium text-slate-600">Solid Structures</div>
+                <div className="text-xs font-black text-[#0A1931] uppercase">Solid Structures</div>
               </div>
               <div className="w-8 h-8 rounded-full bg-[#0066FF] text-white flex items-center justify-center font-bold text-xs">
                 ✓
@@ -115,10 +115,10 @@ const About: React.FC = () => {
                   Email Desk
                 </h4>
                 <a
-                  href="mailto:xtisupport@gmail.com"
+                  href="mailto:support@xtechinfra.com"
                   className="block text-sm font-extrabold text-[#0A1931] hover:text-[#0066FF] transition-colors break-all"
                 >
-                  xtisupport@gmail.com
+                  support@xtechinfra.com
                 </a>
                 <p className="text-[11px] text-[#0066FF] font-medium">
                   Guaranteed Fast Turnaround

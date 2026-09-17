@@ -28,9 +28,9 @@ const Hero: React.FC = () => {
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
             {/* Top Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-[#0066FF] border border-blue-200 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs uppercase tracking-wider bg-blue-50 text-[#0066FF] border border-blue-200 shadow-sm font-black">
               <Sparkles className="w-3.5 h-3.5 text-[#0066FF]" />
-              <span>SMART SYSTEMS • SOLID STRUCTURES</span>
+              <span className="font-black tracking-wider">SMART SYSTEMS • SOLID STRUCTURES</span>
             </div>
 
             {/* Main Headline */}
@@ -139,10 +139,10 @@ const Hero: React.FC = () => {
               {/* Secondary Slogan Strip */}
               <div className="mt-6 pt-5 border-t border-slate-700/80 flex items-center justify-between">
                 <div>
-                  <div className="text-xs font-bold text-white font-['Plus_Jakarta_Sans']">
+                  <div className="text-xs font-black text-white font-['Plus_Jakarta_Sans']">
                     Smart Systems
                   </div>
-                  <div className="text-xs font-medium text-slate-400">
+                  <div className="text-xs font-bold text-slate-300">
                     Solid Structures
                   </div>
                 </div>

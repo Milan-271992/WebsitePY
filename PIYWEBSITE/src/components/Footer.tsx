@@ -85,8 +85,8 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#38BDF8] shrink-0" />
-                <a href="mailto:xtisupport@gmail.com" className="hover:text-white font-bold transition-colors">
-                  xtisupport@gmail.com
+                <a href="mailto:support@xtechinfra.com" className="hover:text-white font-bold transition-colors">
+                  support@xtechinfra.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
@@ -156,9 +156,9 @@ const Footer: React.FC = () => {
                 <div className="text-xs font-black text-white uppercase tracking-wider font-['Plus_Jakarta_Sans']">
                   Partnering For Performance
                 </div>
-                <div className="text-[11px] text-slate-300 flex items-center gap-1 mt-0.5">
+                <div className="text-[11px] text-slate-200 font-bold flex items-center gap-1 mt-0.5">
                   <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                  <span>Smart Systems • Solid Structures</span>
+                  <span className="font-bold text-white">Smart Systems • Solid Structures</span>
                 </div>
               </div>
             </div>

@@ -124,10 +124,10 @@ const Contact: React.FC = () => {
             <h3 className="text-sm font-bold text-[#0A1931] mb-1">Email Us</h3>
             <p className="text-xs text-slate-500 mb-2">Corporate & Support Desk</p>
             <a
-              href="mailto:xtisupport@gmail.com"
+              href="mailto:support@xtechinfra.com"
               className="block text-xs sm:text-sm font-bold text-[#0066FF] hover:underline transition-colors truncate"
             >
-              xtisupport@gmail.com
+              support@xtechinfra.com
             </a>
             <div className="mt-1 text-[11px] text-slate-500 font-medium">
               Rapid response guaranteed
@@ -400,10 +400,10 @@ const Contact: React.FC = () => {
                   </button>
 
                   <a
-                    href="mailto:xtisupport@gmail.com?subject=IT Inquiry from Website"
+                    href="mailto:support@xtechinfra.com?subject=IT Inquiry from Website"
                     className="text-xs text-slate-500 hover:text-[#0066FF] transition-colors underline underline-offset-2"
                   >
-                    Prefer direct email? xtisupport@gmail.com
+                    Prefer direct email? support@xtechinfra.com
                   </a>
                 </div>
               </form>
